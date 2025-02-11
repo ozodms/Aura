@@ -1,0 +1,1353 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+hr,
+a,
+button,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Rokkitt, sans-serif;
+    font-weight: lighter;
+    background: #ffffff;
+}
+
+/* navbar section*/
+header {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #013a63;
+}
+
+.header__logo {
+    font-size: 45px;
+    font-weight: lighter;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.header__ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__links {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 25px;
+    margin: 0 15px;
+    border-radius: 50px;
+    font-size: 26px;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header__links:hover {
+    color: #013a63;
+    background-color: #ffffff;
+}
+
+.header__links:active {
+    background-color: #013a63;
+    color: #ffffff;
+}
+
+.header__burger {
+    display: none;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.header__burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+/* Burger */
+.header__burger {
+    display: none;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.header__burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+/* hero and slider section */
+.slider {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__image {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+.slider__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 1s ease-in-out;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.slider__background_active {
+    opacity: 1;
+}
+
+.slider__background::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #00000080;
+    content: '';
+}
+
+.slider__image_active {
+    opacity: 1;
+}
+
+.slider__text {
+    position: absolute;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slider__text_active {
+    opacity: 1;
+}
+
+.slider__navigation {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    gap: 10px;
+}
+
+.slider__nav-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.slider__nav-button_active {
+    background-color: #013a63;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Rokkitt, sans-serif;
+}
+
+.hero__text-section {
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #013a63;
+}
+
+.hero__text {
+    font-size: 45px;
+    font-weight: lighter;
+    font-family: Rokkitt, sans-serif;
+    color: white;
+}
+
+.hero__typedtext {
+    display: inline-block;
+    margin-top: 30px;
+    border-right: 2px solid black;
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: Rokkitt, sans-serif;
+    letter-spacing: 3px;
+    color: #ffffff;
+    animation: blinkTextCursor 800ms steps(44) infinite normal;
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: black;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* company info section*/
+.info {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1200px;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #013a63;
+}
+
+.info__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.info__img {
+    display: flex;
+    width: 43%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__img img {
+    margin-bottom: 90px;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+.info__text {
+    display: flex;
+    width: 57%;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.info__text__headline {
+    margin: 15px 0;
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: Rokkitt, sans-serif;
+}
+
+.info__text__p {
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+/* stat cards */
+.stat-cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat-cards__item {
+    display: flex;
+    padding: 1em;
+    box-sizing: border-box;
+    width: calc(25% - 20px);
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-bottom: 8px solid #21242b;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #013a63;
+}
+
+.stat-cards__item i {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.stat-cards__num {
+    font-weight: 600;
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.stat-cards__text {
+    padding: 0.7em 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* wristwatch cards */
+.wristwatch-cards__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    font-family: Rokkitt, sans-serif;
+}
+
+.wristwatch-cards {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.wristwatch-cards__inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.wristwatch-cards__page {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.wristwatch-cards__card {
+    margin: 0;
+    width: calc(25% - 40px);
+    height: 420px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #013a63;
+}
+
+.wristwatch-cards__card img {
+    padding: 0;
+    width: calc(100% - 40px);
+    height: 300px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.wristwatch-cards__card img:hover {
+    transform: scale(1.1);
+}
+
+.wristwatch-cards__content {
+    padding: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.wristwatch-card__company {
+    font-family: "Wix Madefor Text", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wristwatch-card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: Rokkitt, sans-serif;
+}
+
+.wristwatch-card__price {
+    font-size: 19px;
+    font-family: Rokkitt, sans-serif;
+    color: #ffffff;
+}
+
+/*Grid 4 pictures */
+.services-grid {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 375px);
+    width: 100%;
+    height: 750px;
+}
+
+.services-grid__item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+}
+
+.services-grid__link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.services-grid__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-grid__overlay {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 35px;
+    font-family: Rokkitt, sans-serif;
+    color: #ffffff;
+    background-color: #013a63;
+}
+
+.services-grid__overlay--top-right {
+    top: 45px;
+    right: 45px;
+}
+
+.services-grid__overlay--bottom-right {
+    bottom: 45px;
+    right: 45px;
+}
+
+.services-grid__overlay--top-left {
+    top: 45px;
+    left: 45px;
+}
+
+.services-grid__overlay--bottom-left {
+    bottom: 45px;
+    left: 45px;
+}
+
+/* Infinity circle */
+.infinite-slider-wrapper {
+    position: relative;
+    width: 90%;
+    height: 200px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.infinite-slider-belt {
+    display: flex;
+    position: absolute;
+    left: 0;
+    animation: slideMove 30s linear infinite;
+}
+
+.infinite-slider-item {
+    flex: 0 0 200px;
+    padding: 0 10px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.infinite-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@keyframes slideMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-3000px);
+    }
+}
+
+.infinite-slider-belt:hover {
+    animation-play-state: paused;
+}
+
+/* FAQ */
+.faq {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px;
+    width: 65%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.faq__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+.faq__item {
+    position: relative;
+    padding: 18px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    font-size: 22px;
+}
+
+.faq__question::after {
+    position: absolute;
+    right: -5px;
+    content: "+";
+}
+
+.faq__answer {
+    padding-top: 15px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 22px;
+    transition: height 0.5s ease-in-out;
+}
+
+.faq__item--active .faq__answer {
+    height: 80px;
+}
+
+.faq__item--active .faq__question {
+    font-size: 30px;
+    transition: font-size 0.5s ease;
+}
+
+.faq__item--active .faq__question::after {
+    font-size: 30px;
+    transition: font-size 0.5s ease;
+    content: "-";
+}
+
+/* footer */
+footer {
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #013a63;
+}
+
+.footer__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer__wrap>div {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer__title {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: Rokkitt, sans-serif;
+    color: #ffffff;
+}
+
+.footer__menu,
+.footer__services-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.footer__menu-item,
+.footer__services-item {
+    margin-bottom: 10px;
+}
+
+.footer__menu-link,
+.footer__services-link {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s;
+    color: #ffffff;
+
+}
+
+.footer__menu-link:hover,
+.footer__services-link:hover {
+    transform: translateX(5px);
+}
+
+.footer__support-item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 16px;
+    font-family: Rokkitt, sans-serif;
+    color: #ffffff;
+}
+
+.footer__office-text {
+    color: #ffffff;
+}
+
+.footer__office {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.footer__payment-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: auto;
+}
+
+.footer__bottom {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #FFFFFF1A;
+}
+
+.footer__social-icons {
+    margin-bottom: 20px;
+}
+
+.footer__social-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer__social-link img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.footer__social-link img:hover {
+    opacity: 0.7;
+}
+
+.footer__text--small {
+    font-size: 14px;
+}
+
+@keyframes slideshow {
+
+    0%,
+    28% {
+        transform: translateX(0);
+    }
+
+    33%,
+    61% {
+        transform: translateX(-33.333%);
+    }
+
+    66%,
+    94% {
+        transform: translateX(-66.666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE WEB DESIGN */
+@media (max-width: 1400px) {
+
+    /* company info section */
+    .info__text__headline {
+        font-size: 45px;
+    }
+
+    .info__text__p {
+        font-size: 20px;
+    }
+
+    /*  stat cards section */
+    .stat-cards__item {
+        width: calc(33.33% - 20px);
+    }
+
+    /*  wristwatch cards section */
+    .wristwatch-cards {
+        max-width: 1100px;
+    }
+
+    .wristwatch-cards__card {
+        width: calc(33.33% - 40px);
+        height: 400px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 280px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid {
+        grid-template-rows: repeat(2, 350px);
+        height: 700px;
+    }
+
+    .services-grid__overlay {
+        font-size: 30px;
+        padding: 5px 8px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    /* navbar adaptive section */
+    header {
+        padding: 0 20px;
+    }
+
+    .header__logo {
+        font-size: 35px;
+    }
+
+    .header__links {
+        font-size: 23px;
+        padding: 10px 20px;
+        margin: 0 11px;
+    }
+
+    /* hero and slider section */
+    .hero__text {
+        font-size: 35px;
+    }
+
+    .hero__typedtext {
+        font-size: 37px;
+    }
+
+    .slider__image {
+        width: 350px;
+        height: 450px;
+    }
+
+
+    /* company info section */
+    .info {
+        height: auto;
+        padding: 20px;
+    }
+
+    .info__text__headline {
+        font-size: 42px;
+    }
+
+    .info__text__p {
+        font-size: 19px;
+    }
+
+
+    /* stat cards section */
+    .stat-cards__item {
+        width: calc(50% - 20px);
+    }
+
+    /* wristwatch cards section */
+    .wristwatch-cards {
+        max-width: 900px;
+    }
+
+    .wristwatch-cards__title {
+        font-size: 28px;
+    }
+
+    .wristwatch-cards__card {
+        width: calc(33.33% - 30px);
+        min-width: 220px;
+        height: 380px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 260px;
+    }
+
+    .wristwatch-cards__inner {
+        gap: 15px;
+    }
+
+    .wristwatch-cards__page {
+        gap: 15px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid {
+        grid-template-rows: repeat(2, 320px);
+        height: 640px;
+    }
+
+    .services-grid__overlay {
+        font-size: 28px;
+    }
+
+    /* footer section */
+
+    .footer__navbar,
+    .footer__services,
+    .footer__support,
+    .footer__offices,
+    .footer__payment-methods {
+        flex-basis: 33.33%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    /* navbar adaptive section */
+    header {
+        padding: 0 20px;
+    }
+
+    .header__logo {
+        font-size: 35px;
+    }
+
+    .header__links {
+        font-size: 20px;
+        padding: 8px 15px;
+        margin: 0 8px;
+    }
+
+    /* hero and slider section */
+    .hero__text {
+        font-size: 30px;
+    }
+
+    .hero__typedtext {
+        font-size: 32px;
+    }
+
+    .slider__image {
+        width: 300px;
+        height: 400px;
+    }
+
+    /* company info section */
+    .info {
+        width: 95%;
+    }
+
+    .info__text__headline {
+        font-size: 38px;
+    }
+
+    .info__text__p {
+        font-size: 18px;
+    }
+
+    /* stat cards section */
+    .stat-cards {
+        max-width: 90%;
+    }
+
+    /* wristwatch cards section */
+    .wristwatch-cards {
+        max-width: 700px;
+        padding: 0 15px;
+    }
+
+    .wristwatch-cards__title {
+        font-size: 26px;
+    }
+
+    .wristwatch-cards__card {
+        width: calc(40% - 20px);
+        min-width: 200px;
+        height: 350px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 240px;
+    }
+
+    .wristwatch-cards__content {
+        padding: 15px;
+    }
+
+    .wristwatch-card__company {
+        font-size: 15px;
+    }
+
+    .wristwatch-card__title {
+        font-size: 17px;
+    }
+
+    .wristwatch-card__price {
+        font-size: 18px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 280px);
+        height: 560px;
+    }
+
+    .services-grid__overlay {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 830px) {
+
+    /* navbar adaptive section */
+    .header__burger {
+        display: flex;
+    }
+
+    .header__ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background-color: #013a63;
+        padding: 20px 0;
+    }
+
+    .header__ul.active {
+        display: flex;
+    }
+
+    .header__links {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    /* hero and slider section */
+    .hero__text {
+        font-size: 25px;
+    }
+
+    .hero__typedtext {
+        font-size: 27px;
+    }
+
+    .slider__image {
+        width: 250px;
+        height: 350px;
+    }
+
+    /* company info section */
+    .info__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info__img {
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .info__img img {
+        width: 70%;
+        margin-bottom: 0;
+    }
+
+    .info__text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info__text__headline {
+        font-size: 35px;
+    }
+
+    .info__text__p {
+        font-size: 17px;
+    }
+
+    .info__img img {
+        margin-bottom: 0;
+    }
+
+    /* stat cards section */
+    .stat-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-cards__item {
+        width: 80%;
+    }
+
+    /* wristwatch cards section */
+    .wristwatch-cards {
+        max-width: 700px;
+    }
+
+    .wristwatch-cards__card {
+        height: 330px;
+    }
+
+    .wristwatch-cards__title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 220px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .services-grid__item {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-grid__image {
+        height: 300px;
+    }
+
+    .services-grid__overlay {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* footer */
+    .footer__navbar,
+    .footer__services,
+    .footer__support,
+    .footer__offices,
+    .footer__payment-methods {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* hero and slider section */
+    .hero__text {
+        font-size: 18px;
+    }
+
+    .hero__typedtext {
+        font-size: 20px;
+    }
+
+    .slider__image {
+        width: 220px;
+        height: 320px;
+    }
+
+    /* company info section */
+    .info__text__headline {
+        font-size: 30px;
+    }
+
+    .info__text__p {
+        font-size: 16px;
+    }
+
+    .info__img img {
+        width: 80%;
+    }
+
+    .info__img img {
+        margin-bottom: 0;
+    }
+
+    /* stat cards section */
+    .stat-cards__item {
+        width: 90%;
+    }
+
+    /* wristwatch cards section */
+    .wristwatch-cards {
+        width: 320px;
+        padding: 0 10px;
+    }
+
+    .wristwatch-cards__title {
+        font-size: 22px;
+    }
+
+    .wristwatch-cards__card {
+        width: calc(100% - 20px);
+        min-width: unset;
+        height: 370px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 260px;
+    }
+
+    .wristwatch-cards__inner {
+        gap: 10px;
+    }
+
+    .wristwatch-cards__page {
+        gap: 10px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid__image {
+        height: 250px;
+    }
+
+    .services-grid__overlay {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* footer section */
+    .footer__wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__navbar,
+    .footer__services,
+    .footer__support,
+    .footer__offices,
+    .footer__payment-methods {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer__menu,
+    .footer__services-list {
+        text-align: center;
+    }
+
+    .footer__menu-item,
+    .footer__services-item {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer__social-link img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer__text--small {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* navbar adaptive section */
+    .header__logo {
+        font-size: 30px;
+    }
+
+    .header__links {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    /* hero and slider section */
+    .hero__text {
+        font-size: 16px;
+    }
+
+    .hero__typedtext {
+        font-size: 18px;
+    }
+
+    .slider__image {
+        width: 170px;
+        height: 270px;
+    }
+
+    /* company info section */
+    .info {
+        padding: 10px;
+    }
+
+    .info__text__headline {
+        font-size: 26px;
+    }
+
+    .info__text__p {
+        font-size: 15px;
+    }
+
+    .info__img img {
+        width: 90%;
+    }
+
+    .info__img img {
+        margin-bottom: 0;
+    }
+
+    /* stat cards section */
+    .stat-cards__item {
+        width: 100%;
+    }
+
+    /* wristwatch cards section */
+    .wristwatch-cards__title {
+        font-size: 20px;
+    }
+
+    .wristwatch-cards__content {
+        padding: 12px;
+    }
+
+    .wristwatch-card__company {
+        font-size: 14px;
+    }
+
+    .wristwatch-card__title {
+        font-size: 16px;
+        margin-top: 3px;
+        margin-bottom: 8px;
+    }
+
+    .wristwatch-card__price {
+        font-size: 17px;
+    }
+
+    .wristwatch-cards__card img {
+        height: 240px;
+        padding-top: 15px;
+    }
+
+    .wristwatch-cards__card {
+        height: 340px;
+    }
+
+    /* grid 4 pictures section */
+    .services-grid__image {
+        height: 200px;
+    }
+
+    .services-grid__overlay {
+        font-size: 18px;
+        padding: 4px 6px;
+    }
+}
