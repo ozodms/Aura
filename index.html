@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura.lv</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italianno&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <!-- Font-family: Rokkitt, Spectral, Wix Madefor Text, Italianno-->
+</head>
+
+<body>
+    <!--Navbar section-->
+    <header>
+        <div class="header__logo">Aura</div>
+        <nav class="header__nav-bar">
+            <button class="header__burger" aria-label="Open menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+            <ul class="header__ul">
+                <li><a href="#" class="header__links">Home</a></li>
+                <li><a href="#about-us-section" class="header__links">About us</a></li>
+                <li><a href="#collection-section" class="header__links">Collection</a></li>
+                <li><a href="#service-section" class="header__links">Service</a></li>
+                <li><a href="#faq-section" class="header__links">FAQ</a></li>
+                <li><a href="#contact-us-section" class="header__links">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Hero-Slider section-->
+        <hr>
+        <div class="hero">
+            <div class="hero__text-section">
+                <h1 class="hero__text">Perfection in simplicity, luxury in precision</h1>
+                <h1 class="hero__typedtext">&nbsp;</h1>
+            </div>
+            <div class="slider">
+                <div class="slider__background"></div>
+                <img src="img/sliderimg1.png" class="slider__image slider__image_active" alt="Slider image">
+                <img src="img/sliderimg2.png" class="slider__image" alt="Slider image">
+                <img src="img/sliderimg3.png" class="slider__image" alt="Slider image">
+                <img src="img/sliderimg4.png" class="slider__image" alt="Slider image">
+                <img src="img/sliderimg5.png" class="slider__image" alt="Slider image">
+                <div class="slider__navigation">
+                    <div class="slider__nav-button slider__nav-button_active" data-index="0"></div>
+                    <div class="slider__nav-button" data-index="1"></div>
+                    <div class="slider__nav-button" data-index="2"></div>
+                    <div class="slider__nav-button" data-index="3"></div>
+                    <div class="slider__nav-button" data-index="4"></div>
+                </div>
+            </div>
+        </div>
+        <!--company info section-->
+        <div id="about-us-section" class="info">
+            <div class="info__container">
+                <div class="info__img">
+                    <img src="img/infoimg1.png" alt="Jacob and Co">
+                </div>
+                <div class="info__text">
+                    <h1 class="info__text__headline">Aura — all about watches: luxury, quality, and time.</h1>
+                    <p class="info__text__p">We are more than just a store. Aura is a place where watches become a
+                        reflection of luxury and individuality, and every client feels part of a unique story. For
+                        over
+                        10 years, we&rsquo;ve been buying, selling, and repairing luxury handmade watches,
+                        delivering
+                        accessories that transcend time.</p>
+                    <p class="info__text__p">During this time, more than 600 clients worldwide, including
+                        celebrities,
+                        entrepreneurs, and collectors, have trusted us. They choose Aura for our professionalism,
+                        consistent quality, and meticulous attention to detail. We take pride in a reputation built
+                        on
+                        trust and a commitment to exceed expectations.</p>
+                    <p class="info__text__p">Our mission is to bring joy to watch enthusiasts anytime, anywhere in
+                        the
+                        world. We believe that every purchase or repair of a watch is more than a service;
+                        it&rsquo;s a
+                        connection to the world of luxury and precision. Aura is your guide to a realm where every
+                        second matters.</p>
+                </div>
+            </div>
+        </div>
+        <!--stat cards-->
+        <div class="stat-cards">
+            <div class="stat-cards__item">
+                <span class="stat-cards__num" data-value="768">000</span>
+                <span class="stat-cards__text">Happy Clients</span>
+            </div>
+
+            <div class="stat-cards__item">
+                <span class="stat-cards__num" data-value="19">00</span>
+                <span class="stat-cards__text">Stores worldwide</span>
+            </div>
+
+            <div class="stat-cards__item">
+                <span class="stat-cards__num" data-value="350">000</span>
+                <span class="stat-cards__text">Unique Models</span>
+            </div>
+
+            <div class="stat-cards__item">
+                <span class="stat-cards__num" data-value="51">000</span>
+                <span class="stat-cards__text">Countries Worldwide</span>
+            </div>
+        </div>
+        <!--wristwatch cards-->
+        <div id="collection-section" class="wristwatch-cards">
+            <p class="wristwatch-cards__title">Our bestsellers — wristwatches chosen by leaders</p>
+            <div class="wristwatch-cards__inner">
+                <div class="wristwatch-cards__page">
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic1.png" alt="Audemars Piguet" title="Audemars Piguet">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Audemars Piguet</p>
+                            <p class="wristwatch-card__title">Royal Oak</p>
+                            <p class="wristwatch-card__price">€ 49.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic2.png" alt="Audemars Piguet" title="Audemars Piguet">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Audemars Piguet</p>
+                            <p class="wristwatch-card__title">Royal Oak</p>
+                            <p class="wristwatch-card__price">€ 55.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic3.png" alt="Rolex" title="Rolex">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Rolex</p>
+                            <p class="wristwatch-card__title">Submariner Green</p>
+                            <p class="wristwatch-card__price">€ 20.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic4.png" alt="Patek Philippe" title="Patek Philippe">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Patek Philippe</p>
+                            <p class="wristwatch-card__title">Nautilus</p>
+                            <p class="wristwatch-card__price">€ 32.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wristwatch-cards__page">
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic5.png" alt="Richard Mille" title="Richard Mille">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Richard Mille</p>
+                            <p class="wristwatch-card__title">RM 11</p>
+                            <p class="wristwatch-card__price">€ 320.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic6.png" alt="Richard Mille" title="Richard Mille">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Richard Mille</p>
+                            <p class="wristwatch-card__title">Titan RM010</p>
+                            <p class="wristwatch-card__price">€ 450.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic7.png" alt="Richard Mille" title="Richard Mille">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Richard Mille</p>
+                            <p class="wristwatch-card__title">RM 055 Watson Ceramic</p>
+                            <p class="wristwatch-card__price">€ 550.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic8.png" alt="Rolex" title="Rolex">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Rolex</p>
+                            <p class="wristwatch-card__title">Submariner Blue</p>
+                            <p class="wristwatch-card__price">€ 22.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wristwatch-cards__page">
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic9.png" alt="Richard Mille" title="Richard Mille">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Richard Mille</p>
+                            <p class="wristwatch-card__title">RM27-01 Tourbillon</p>
+                            <p class="wristwatch-card__price">€ 1.550.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic10.png" alt="Patek Philippe" title="Patek Philippe">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Patek Philippe</p>
+                            <p class="wristwatch-card__title">Aquanaut</p>
+                            <p class="wristwatch-card__price">€ 50.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic11.png" alt="Panerai Luminor" title="Panerai Luminor">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Panerai Luminor</p>
+                            <p class="wristwatch-card__title">Marina</p>
+                            <p class="wristwatch-card__price">€ 6.500</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic12.png" alt="Cartier" title="Cartier">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Cartier</p>
+                            <p class="wristwatch-card__title">Panthere</p>
+                            <p class="wristwatch-card__price">€ 8.950</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wristwatch-cards__page">
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic13.png" alt="Vacheron Constantin" title="Vacheron Constantin">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Vacheron Constantin</p>
+                            <p class="wristwatch-card__title">Patrimony</p>
+                            <p class="wristwatch-card__price">€ 32.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic14.png" alt="Hublot" title="Hublot">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Hublot</p>
+                            <p class="wristwatch-card__title">Classic Fusion</p>
+                            <p class="wristwatch-card__price">€ 9.500</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic15.png" alt="Richard Mille" title="Richard Mille">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Richard Mille</p>
+                            <p class="wristwatch-card__title">RM 035</p>
+                            <p class="wristwatch-card__price">€ 485.000</p>
+                        </div>
+                    </div>
+                    <div class="wristwatch-cards__card">
+                        <img src="img/trendcarouselpic16.png" alt="Nomos Glashütte" title="Nomos Glashütte">
+                        <div class="wristwatch-cards__content">
+                            <p class="wristwatch-card__company">Nomos Glashütte</p>
+                            <p class="wristwatch-card__title">Tetra</p>
+                            <p class="wristwatch-card__price">€ 1.750</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid 4 pictures-->
+        <div id="service-section" class="services-grid">
+            <div class="services-grid__item">
+                <a href="#" class="services-grid__link">
+                    <img src="img/gridservicesimg3.jpg" alt="Watch Repair" class="services-grid__image">
+                    <div class="services-grid__overlay services-grid__overlay--top-left">Watch Repair</div>
+                </a>
+            </div>
+            <div class="services-grid__item">
+                <a href="#" class="services-grid__link">
+                    <img src="img/gridservicesimg2.png" alt="Watch Purchase" class="services-grid__image">
+                    <div class="services-grid__overlay services-grid__overlay--top-right">Watch Purchase</div>
+                </a>
+            </div>
+            <div class="services-grid__item">
+                <a href="#" class="services-grid__link">
+                    <img src="img/gridservicesimg1.png" alt="Watch Exchange" class="services-grid__image">
+                    <div class="services-grid__overlay services-grid__overlay--bottom-left">Watch Exchange</div>
+                </a>
+            </div>
+            <div class="services-grid__item">
+                <a href="#" class="services-grid__link">
+                    <img src="img/gridservicesimg4.png" alt="Watch Sale" class="services-grid__image">
+                    <div class="services-grid__overlay services-grid__overlay--bottom-right">Watch Sale</div>
+                </a>
+            </div>
+        </div>
+        <!--infinity circle-->
+        <div class="infinite-slider-wrapper">
+            <div class="infinite-slider-belt" id="infiniteBelt">
+            </div>
+        </div>
+        <!-- FAQ -->
+        <div id="faq-section" class="faq">
+            <h2 class="faq__title">Frequently Asked Questions</h2>
+
+            <div class="faq__item">
+                <div class="faq__question">Do you offer warranties on your watches?</div>
+                <div class="faq__answer">Yes, all our watches come with a standard [1-year/2-year]
+                    manufacturer&rsquos
+                    warranty, covering any defects in materials or craftsmanship. For more details, please refer to
+                    our
+                    warranty policy.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Can I return or exchange a watch if Im not satisfied?</div>
+                <div class="faq__answer">Absolutely! We offer a [14-day/30-day] return and exchange policy. The
+                    watch
+                    must be unused, in its original packaging, and accompanied by the purchase receipt. Custom or
+                    engraved watches are not eligible for return.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Do you provide watch repair or battery replacement services?</div>
+                <div class="faq__answer">Yes, we offer professional watch repair and battery replacement services.
+                    Bring
+                    your watch to our store or contact us to schedule a service.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Are your watches authentic?</div>
+                <div class="faq__answer">Yes, all our watches are 100% authentic and sourced directly from
+                    authorized
+                    dealers or trusted suppliers. We do not sell replicas or counterfeit products.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Do you size watch bracelets or adjust straps?</div>
+                <div class="faq__answer">Yes, we provide complimentary bracelet resizing for watches purchased from
+                    our
+                    store. For watches purchased elsewhere, a small fee may apply.</div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Do you ship internationally?</div>
+                <div class="faq__answer">Yes, we offer international shipping to many countries. Shipping fees and
+                    delivery times vary depending on the destination. Please check our shipping policy for details.
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__question">Do you sell limited edition or pre-owned watches?</div>
+                <div class="faq__answer">Yes, we carry a selection of limited edition and pre-owned watches. Each
+                    pre-owned watch is thoroughly inspected for quality and authenticity before being offered for
+                    sale.
+                </div>
+            </div>
+        </div>
+        <!--Footer -->
+        <footer id="contact-us-section" class="footer">
+            <div class="footer__wrap">
+                <div class="footer__navbar">
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Home</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Collection</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Sell a watch</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">FAQ</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__services">
+                    <h3 class="footer__title">SERVICES</h3>
+                    <ul class="footer__services-list">
+                        <li class="footer__services-item"><a href="#" class="footer__services-link">Watch
+                                purchase</a>
+                        </li>
+                        <li class="footer__services-item"><a href="#" class="footer__services-link">Watch sale</a>
+                        </li>
+                        <li class="footer__services-item"><a href="#" class="footer__services-link">Watch
+                                exchange</a>
+                        </li>
+                        <li class="footer__services-item"><a href="#" class="footer__services-link">Watch repair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__support">
+                    <h3 class="footer__title">Personalized support</h3>
+                    <div class="footer__support-item">
+                        <img src="img/footerphonecall4.png" alt="phone" class="footer__icon" title="Phone number">
+                        <p class="footer__text">+88 88888888</p>
+                    </div>
+                    <div class="footer__support-item">
+                        <img src="img/footergmailicon.png" alt="gmail" class="footer__icon" title="Email">
+                        <p class="footer__text">auralv@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer__offices">
+                    <h3 class="footer__title">Our main offices</h3>
+                    <div class="footer__office">
+                        <img src="img/footerofficesuk.png" alt="London" class="footer__icon" title="London">
+                        <p class="footer__office-text">LND: 7.00-22.00, 7/7</p>
+                    </div>
+                    <div class="footer__office">
+                        <img src="img/footerofficesusa.png" alt="Los Angeles" class="footer__icon" title="Los Angeles">
+                        <p class="footer__office-text">LA: 7.00-22.00, 7/7</p>
+                    </div>
+                    <div class="footer__office">
+                        <img src="img/footerofficesuae.png" alt="Dubai" class="footer__icon" title="Dubai">
+                        <p class="footer__office-text">DXB: 7.00-22.00, 7/7</p>
+                    </div>
+                    <div class="footer__office">
+                        <img src="img/footerofficesrussia.png" alt="Moscow" class="footer__icon" title="Moscow">
+                        <p class="footer__office-text">MSW: 7.00-22.00, 7/7</p>
+                    </div>
+                    <div class="footer__office">
+                        <img src="img/footerofficesita.png" alt="Rome" class="footer__icon" title="Rome">
+                        <p class="footer__office-text">ROM: 7.00-22.00, 7/7</p>
+                    </div>
+                </div>
+
+                <div class="footer__payment-methods">
+                    <h3 class="footer__title">Payment Methods:</h3>
+                    <img src="img/ApplePayfooterimg.png" alt="Apple Pay" class="footer__payment-icon" title="Apple Pay">
+                    <img src="img/Visafooterimg.png" alt="Visa" class="footer__payment-icon" title="Visa">
+                    <img src="img/MScardfooterimg.png" alt="Master Card" class="footer__payment-icon"
+                        title="Master Card">
+                </div>
+            </div>
+
+
+
+            <div class="footer__bottom">
+                <div class="footer__social-icons">
+                    <a href="#" class="footer__social-link"><img src="img/footerbottomfacebook.png" alt="Facebook"
+                            title="Facebook"></a>
+                    <a href="#" class="footer__social-link"><img src="img/footerbottominstagram.png" alt="Instagram"
+                            title="Instagram"></a>
+                    <a href="#" class="footer__social-link"><img src="img/footerbottomtwitter.png" alt="Twitter"
+                            title="Twitter"></a>
+                    <a href="#" class="footer__social-link"><img src="img/footerbottomyoutube.png" alt="YouTube"
+                            title="YouTube"></a>
+                </div>
+                <p class="footer__text footer__text--small">developed by Ozodbek</p>
+            </div>
+        </footer>
+
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
